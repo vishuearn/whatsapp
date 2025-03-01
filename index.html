@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Redirect</title>
-    <script type="text/javascript">
-        // Redirect immediately when the page loads
-       window.onload = function() {
-           // window.location.href = "https://id.warm23hugs.xyz/m/kty24in.html?fbclid=PAY2xjawIqGSRleHRuA2FlbQEwAGFkaWQBqxhNTuuTRAGmFwY3Jf0TYLam0Lkmxpw9AALwcuGe2T7i7eg4EQDa0Rht6p2XsfIFRf67_aem_0HNMEIeSgqCjYMcCrSwV7Q&fbclid=PAZXh0bgNhZW0BMABhZGlkAasYTU7rk0QBphcGNyX9E2C2ptC5JsacPQAC8HLhntk-4u3oOBEA2tEYbeqdl7HyBUX-uw_aem_0HNMEIeSgqCjYMcCrSwV7Q"; // Change this to the link you want
-          
-          window.location.href = "https://t.me/visalearning";
-       
-       };
+    <title>Redirect</title>
+    <script>
+        // List of random links
+        const randomLinks = [
+            "https://url10.top/b/YvxcXENj1555?fbclid=PAY2xjawIqKWFleHRuA2FlbQIxMAABpgVbZCL5eJlRp_oI0bLdKuL-vIdSeYZRIxhT250Vtm1GItQ7LnoAb9zjZA_aem_9IjFIH-n57EWKrwlcRJBKw", // Replace with your first link
+            "https://t.me/visalearning", // Replace with your second link
+            "https://url10.top/b/YvxcXENj1555?fbclid=PAY2xjawIqKWFleHRuA2FlbQIxMAABpgVbZCL5eJlRp_oI0bLdKuL-vIdSeYZRIxhT250Vtm1GItQ7LnoAb9zjZA_aem_9IjFIH-n57EWKrwlcRJBKw"  // Replace with your third link
+        ];
 
-         
+        // Function to select a random link and redirect
+        function randomRedirect() {
+            const randomIndex = Math.floor(Math.random() * randomLinks.length); // Randomly select an index
+            const selectedLink = randomLinks[randomIndex]; // Get the link based on the random index
+            window.location.href = selectedLink; // Redirect to the selected link
+        }
+
+        // Call the randomRedirect function on page load
+        window.onload = randomRedirect;
     </script>
 </head>
 <body>
-    <!-- No content in the body -->
+    <!-- Body is empty; it will redirect automatically on page load -->
 </body>
 </html>
