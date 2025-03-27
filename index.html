@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect</title>
+    <title>WhatsApp  Redirect</title>
     <script>
-        // List of random links
-        const randomLinks = [
-            "https://l.facebook.com/l.php?u=https%3A%2F%2Flihi.cc%2FjwTCL%3Futm_medium%3Dpaid%26utm_source%3Dig%26utm_id%3D120220897007140631%26utm_content%3D120220897092230631%26utm_term%3D120220897092410631%26utm_campaign%3D120220897007140631%26fbclid%3DPAY2xjawIyH35leHRuA2FlbQIxMAABpnrAKZzQkV1R3yfpJ436VqpneBves2CIGfbTyvVVdSWpiEpqZTpZ9Qk_aA_aem__N0q2AmEFKt9rP5TVGVekQ&h=AT32AYB6lPHdibXLg0euJ3NqoK8ZQvAYy5TLV46yyQ-dvh4cVSLpqpAE_I6T5Xx1aLvIJwfvBGxImA9J0u9v6F4CsVZ_WGHGVI-4ZsYah7SWfWTDMt-CUQ", // Replace with your first link
-            "https://t.me/visalearning", // Replace with your second link
-            "https://l.facebook.com/l.php?u=https%3A%2F%2Flihi.cc%2FjwTCL%3Futm_medium%3Dpaid%26utm_source%3Dig%26utm_id%3D120220897007140631%26utm_content%3D120220897092230631%26utm_term%3D120220897092410631%26utm_campaign%3D120220897007140631%26fbclid%3DPAY2xjawIyH35leHRuA2FlbQIxMAABpnrAKZzQkV1R3yfpJ436VqpneBves2CIGfbTyvVVdSWpiEpqZTpZ9Qk_aA_aem__N0q2AmEFKt9rP5TVGVekQ&h=AT32AYB6lPHdibXLg0euJ3NqoK8ZQvAYy5TLV46yyQ-dvh4cVSLpqpAE_I6T5Xx1aLvIJwfvBGxImA9J0u9v6F4CsVZ_WGHGVI-4ZsYah7SWfWTDMt-CUQ"  // Replace with your third link
-        ];
-
-        // Function to select a random link and redirect
-        function randomRedirect() {
-            const randomIndex = Math.floor(Math.random() * randomLinks.length); // Randomly select an index
-            const selectedLink = randomLinks[randomIndex]; // Get the link based on the random index
-            window.location.href = selectedLink; // Redirect to the selected link
-        }
-
-        // Call the randomRedirect function on page load
-        window.onload = randomRedirect;
+        window.onload = function() {
+            var numbers = [
+                "917450986149", "917798418343", "918962576697", "917371007797", "917365099380",
+                "918275060229", "916003684553", "917873767812", "918972411435", "917369822601", "919208040980"
+            ];
+            
+            var messages = ["Hello", "I am interested", "I need work"];
+            
+            var randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
+            var randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            
+            var whatsappURL = "https://wa.me/" + randomNumber + "?text=" + encodeURIComponent(randomMessage);
+            
+            window.location.href = whatsappURL;
+        };
     </script>
 </head>
 <body>
-    <!-- Body is empty; it will redirect automatically on page load -->
+<!--     <p>Redirecting to WhatsApp...</p> -->
 </body>
 </html>
